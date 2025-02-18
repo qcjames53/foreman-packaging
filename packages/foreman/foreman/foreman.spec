@@ -4,12 +4,12 @@
 %global dynflow_sidekiq_service_name dynflow-sidekiq@
 %global rake /usr/bin/rake
 
-%global release 5
+%global release 1
 %global prereleasesource develop
 %global prerelease %{?prereleasesource}
 
 Name:    foreman
-Version: 3.14.0
+Version: 3.15.0
 Release: %{?prerelease:0.}%{release}%{?prerelease:.}%{?prerelease}%{?nightly}%{?dist}
 Summary: Systems Management web application
 
@@ -861,6 +861,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Tue Feb 18 2025 Patrick Creech <pcreech@redhat.com> - 3.15.0-0.1.develop
+- Bump version to 3.15-develop
+
 * Mon Jan 20 2025 Adam Ruzicka <aruzicka@redhat.com> - 3.14.0-0.5.develop
 - Bump foreman-js to 14
 

@@ -1,12 +1,12 @@
 %global homedir %{_datadir}/%{name}
 %global confdir config
 
-%global release 2
+%global release 1
 %global prereleasesource develop
 %global prerelease %{?prereleasesource}
 
 Name:           foreman-proxy
-Version:        3.14.0
+Version:        3.15.0
 Release:        %{?prerelease:0.}%{release}%{?prerelease:.}%{?prerelease}%{?nightly}%{?dist}
 Summary:        Restful Proxy for DNS, DHCP, TFTP, PuppetCA and Puppet
 
@@ -238,6 +238,9 @@ exit 0
 
 
 %changelog
+* Tue Feb 18 2025 Patrick Creech <pcreech@redhat.com> - 3.15.0-0.1.develop
+- Bump version to 3.15-develop
+
 * Fri Jan 24 2025 Adam Ruzicka <aruzicka@redhat.com> - 3.14.0-0.2.develop
 - Declare rexml as dependency
 
